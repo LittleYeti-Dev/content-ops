@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="100%" stop-color="#3A5A8C"/>
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1B2A4A">Figure 1. HGC³AE² Framework Architecture</text>
+  
+  <!-- H - Human Authority (top) -->
+  <rect x="250" y="55" width="300" height="60" rx="8" fill="#1B2A4A" filter="url(#shadow)"/>
+  <text x="400" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="white">H — Human Authority</text>
+  <text x="400" y="102" text-anchor="middle" font-size="11" fill="#B8C8E0">Terminal trust anchor</text>
+  
+  <!-- Arrow down -->
+  <path d="M400 115 L400 140" stroke="#1B2A4A" stroke-width="2" marker-end="url(#arrowDown)"/>
+  <defs><marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1B2A4A"/></marker></defs>
+  
+  <!-- G - Governance (second tier) -->
+  <rect x="200" y="145" width="400" height="60" rx="8" fill="#2C4A7C" filter="url(#shadow)"/>
+  <text x="400" y="172" text-anchor="middle" font-size="16" font-weight="bold" fill="white">G — Governance</text>
+  <text x="400" y="192" text-anchor="middle" font-size="11" fill="#B8C8E0">Constraints · Permissions · Escalation · Accountability</text>
+  
+  <!-- Arrows down to C3 -->
+  <path d="M300 205 L300 230" stroke="#2C4A7C" stroke-width="2" marker-end="url(#arrowDown2)"/>
+  <path d="M400 205 L400 230" stroke="#2C4A7C" stroke-width="2" marker-end="url(#arrowDown2)"/>
+  <path d="M500 205 L500 230" stroke="#2C4A7C" stroke-width="2" marker-end="url(#arrowDown2)"/>
+  <defs><marker id="arrowDown2" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2C4A7C"/></marker></defs>
+  
+  <!-- C3 - Three boxes -->
+  <rect x="100" y="235" width="180" height="70" rx="8" fill="#3A5A8C" filter="url(#shadow)"/>
+  <text x="190" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Context</text>
+  <text x="190" y="280" text-anchor="middle" font-size="10" fill="#C8D8EC">Active, validated state</text>
+  
+  <rect x="310" y="235" width="180" height="70" rx="8" fill="#3A5A8C" filter="url(#shadow)"/>
+  <text x="400" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Collaboration</text>
+  <text x="400" y="280" text-anchor="middle" font-size="10" fill="#C8D8EC">Continuous process</text>
+  
+  <rect x="520" y="235" width="180" height="70" rx="8" fill="#3A5A8C" filter="url(#shadow)"/>
+  <text x="610" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Continuity</text>
+  <text x="610" y="280" text-anchor="middle" font-size="10" fill="#C8D8EC">Enforced persistence</text>
+  
+  <!-- Bidirectional arrows between C3 -->
+  <line x1="282" y1="270" x2="308" y2="270" stroke="#5A7AAC" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="492" y1="270" x2="518" y2="270" stroke="#5A7AAC" stroke-width="1.5" stroke-dasharray="4"/>
+  
+  <!-- C3 label -->
+  <text x="50" y="275" font-size="20" font-weight="bold" fill="#3A5A8C">C³</text>
+  
+  <!-- Arrows down to AE2 -->
+  <path d="M300 305 L300 335" stroke="#3A5A8C" stroke-width="2" marker-end="url(#arrowDown3)"/>
+  <path d="M500 305 L500 335" stroke="#3A5A8C" stroke-width="2" marker-end="url(#arrowDown3)"/>
+  <defs><marker id="arrowDown3" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#3A5A8C"/></marker></defs>
+  
+  <!-- AE2 - Two boxes -->
+  <rect x="150" y="340" width="230" height="70" rx="8" fill="#4A6A9C" filter="url(#shadow)"/>
+  <text x="265" y="367" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Aligned Engineering</text>
+  <text x="265" y="387" text-anchor="middle" font-size="10" fill="#C8D8EC">Design-time governance integration</text>
+  
+  <rect x="420" y="340" width="230" height="70" rx="8" fill="#4A6A9C" filter="url(#shadow)"/>
+  <text x="535" y="367" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Executable Execution</text>
+  <text x="535" y="387" text-anchor="middle" font-size="10" fill="#C8D8EC">Runtime verification</text>
+  
+  <!-- AE2 label -->
+  <text x="50" y="380" font-size="20" font-weight="bold" fill="#4A6A9C">AE²</text>
+  
+  <!-- Bidirectional arrow -->
+  <line x1="382" y1="375" x2="418" y2="375" stroke="#6A8ABC" stroke-width="1.5" stroke-dasharray="4"/>
+  
+  <!-- Skipjack Protocol bar -->
+  <rect x="100" y="435" width="600" height="45" rx="8" fill="#E8EDF4" stroke="#3A5A8C" stroke-width="2"/>
+  <text x="400" y="462" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B2A4A">Skipjack Protocol — Runtime Enforcement Doctrine</text>
+  
+  <!-- Feedback arrows -->
+  <path d="M720 270 L740 270 L740 90 L555 90" stroke="#999" stroke-width="1.5" stroke-dasharray="5" fill="none" marker-end="url(#arrowFeedback)"/>
+  <text x="755" y="185" font-size="10" fill="#999" transform="rotate(90, 755, 185)">Feedback</text>
+  <defs><marker id="arrowFeedback" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#999"/></marker></defs>
+</svg>

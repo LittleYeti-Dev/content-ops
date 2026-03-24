@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Georgia, serif">
+  <defs>
+    <filter id="shadow2" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27AE60"/>
+    </marker>
+  </defs>
+  
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B2A4A">Figure 2. Confident Misalignment — Failure Cascade</text>
+  
+  <!-- Stage 1: Valid Operation -->
+  <rect x="30" y="60" width="140" height="80" rx="8" fill="#27AE60" filter="url(#shadow2)"/>
+  <text x="100" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Valid</text>
+  <text x="100" y="107" text-anchor="middle" font-size="10" fill="#D5F5E3">Operation</text>
+  <text x="100" y="125" text-anchor="middle" font-size="9" fill="#D5F5E3">Context intact</text>
+  
+  <!-- Arrow -->
+  <line x1="172" y1="100" x2="208" y2="100" stroke="#C0392B" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 2: Context Drift -->
+  <rect x="210" y="60" width="140" height="80" rx="8" fill="#F39C12" filter="url(#shadow2)"/>
+  <text x="280" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Context</text>
+  <text x="280" y="107" text-anchor="middle" font-size="10" fill="#FEF9E7">Drift</text>
+  <text x="280" y="125" text-anchor="middle" font-size="9" fill="#FEF9E7">Stale/assembled data</text>
+  
+  <!-- Arrow -->
+  <line x1="352" y1="100" x2="388" y2="100" stroke="#C0392B" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 3: Silent Continuation -->
+  <rect x="390" y="60" width="140" height="80" rx="8" fill="#E67E22" filter="url(#shadow2)"/>
+  <text x="460" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Silent</text>
+  <text x="460" y="107" text-anchor="middle" font-size="10" fill="#FDEBD0">Continuation</text>
+  <text x="460" y="125" text-anchor="middle" font-size="9" fill="#FDEBD0">No error signal</text>
+  
+  <!-- Arrow -->
+  <line x1="532" y1="100" x2="568" y2="100" stroke="#C0392B" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 4: Confident Output -->
+  <rect x="570" y="60" width="170" height="80" rx="8" fill="#C0392B" filter="url(#shadow2)"/>
+  <text x="655" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Confident</text>
+  <text x="655" y="102" text-anchor="middle" font-size="10" fill="#F5B7B1">Misaligned Output</text>
+  <text x="655" y="122" text-anchor="middle" font-size="9" fill="#F5B7B1">Coherent, plausible,</text>
+  <text x="655" y="134" text-anchor="middle" font-size="9" fill="#F5B7B1">authoritative — wrong</text>
+  
+  <!-- Human impact zone -->
+  <rect x="120" y="185" width="560" height="65" rx="8" fill="none" stroke="#C0392B" stroke-width="2" stroke-dasharray="6"/>
+  <text x="400" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">Human Impact Zone</text>
+  <text x="400" y="230" text-anchor="middle" font-size="11" fill="#666">Operator accepts output as valid → Trust calibration shifts → Detection burden on human</text>
+  
+  <!-- Skipjack intervention -->
+  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold" fill="#27AE60">HGC³AE² + Skipjack Intervention Points</text>
+  
+  <!-- Intervention arrows pointing up -->
+  <rect x="55" y="300" width="130" height="55" rx="6" fill="#E8F8F5" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="120" y="320" text-anchor="middle" font-size="10" font-weight="bold" fill="#27AE60">Live Validation</text>
+  <text x="120" y="335" text-anchor="middle" font-size="9" fill="#1E8449">Prevent drift at source</text>
+  <line x1="120" y1="300" x2="120" y2="142" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
+  
+  <rect x="225" y="300" width="130" height="55" rx="6" fill="#E8F8F5" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="290" y="320" text-anchor="middle" font-size="10" font-weight="bold" fill="#27AE60">Uncertainty Signal</text>
+  <text x="290" y="335" text-anchor="middle" font-size="9" fill="#1E8449">Flag unresolved state</text>
+  <line x1="290" y1="300" x2="290" y2="142" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
+  
+  <rect x="395" y="300" width="130" height="55" rx="6" fill="#E8F8F5" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="460" y="320" text-anchor="middle" font-size="10" font-weight="bold" fill="#27AE60">Reconciliation</text>
+  <text x="460" y="335" text-anchor="middle" font-size="9" fill="#1E8449">Checkpoint before action</text>
+  <line x1="460" y1="300" x2="460" y2="142" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
+  
+  <rect x="565" y="300" width="160" height="55" rx="6" fill="#E8F8F5" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="645" y="320" text-anchor="middle" font-size="10" font-weight="bold" fill="#27AE60">Governance Gate</text>
+  <text x="645" y="335" text-anchor="middle" font-size="9" fill="#1E8449">Block unauthorized action</text>
+  <line x1="645" y1="300" x2="645" y2="142" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
+</svg>

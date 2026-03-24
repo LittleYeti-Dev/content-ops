@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="dangerZone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FADBD8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FADBD8" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B2A4A">Figure 4. Trust Calibration: Perceived vs. Actual Reliability Over Time</text>
+  
+  <!-- Axes -->
+  <line x1="80" y1="350" x2="650" y2="350" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="350" x2="80" y2="50" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Y-axis label -->
+  <text x="30" y="200" text-anchor="middle" font-size="12" fill="#333" transform="rotate(-90, 30, 200)">Reliability / Trust Level</text>
+  
+  <!-- X-axis label -->
+  <text x="365" y="395" text-anchor="middle" font-size="12" fill="#333">Interaction Duration →</text>
+  
+  <!-- Y-axis ticks -->
+  <text x="70" y="354" text-anchor="end" font-size="10" fill="#666">0%</text>
+  <text x="70" y="254" text-anchor="end" font-size="10" fill="#666">50%</text>
+  <text x="70" y="154" text-anchor="end" font-size="10" fill="#666">80%</text>
+  <text x="70" y="74" text-anchor="end" font-size="10" fill="#666">100%</text>
+  <line x1="75" y1="250" x2="650" y2="250" stroke="#EEE" stroke-width="1"/>
+  <line x1="75" y1="150" x2="650" y2="150" stroke="#EEE" stroke-width="1"/>
+  
+  <!-- Danger zone (gap between curves) -->
+  <path d="M80 250 Q200 180 300 140 Q400 110 500 95 Q570 88 640 85 
+           L640 130 Q570 140 500 160 Q400 190 300 230 Q200 270 80 310 Z" 
+        fill="url(#dangerZone)"/>
+  <text x="400" y="165" text-anchor="middle" font-size="11" font-weight="bold" fill="#C0392B" opacity="0.7">Misalignment Gap</text>
+  
+  <!-- Actual Reliability (lower, plateaus and dips) -->
+  <path d="M80 310 Q150 280 200 260 Q280 235 350 230 Q420 228 480 235 Q540 245 580 250 Q620 255 640 258" 
+        stroke="#C0392B" stroke-width="2.5" fill="none"/>
+  <circle cx="640" cy="258" r="4" fill="#C0392B"/>
+  <text x="660" y="265" font-size="11" font-weight="bold" fill="#C0392B">Actual</text>
+  <text x="660" y="278" font-size="9" fill="#C0392B">Reliability</text>
+  
+  <!-- Perceived Reliability (higher, keeps climbing) -->
+  <path d="M80 250 Q150 210 200 180 Q280 145 350 120 Q420 100 480 90 Q540 83 600 80 Q630 78 640 78" 
+        stroke="#3A5A8C" stroke-width="2.5" fill="none"/>
+  <circle cx="640" cy="78" r="4" fill="#3A5A8C"/>
+  <text x="660" y="78" font-size="11" font-weight="bold" fill="#3A5A8C">Perceived</text>
+  <text x="660" y="91" font-size="9" fill="#3A5A8C">Reliability</text>
+  
+  <!-- With HGC3AE2 (actual improves, gap closes) -->
+  <path d="M80 310 Q150 270 200 240 Q280 200 350 175 Q420 155 480 140 Q540 130 600 125 Q630 122 640 120" 
+        stroke="#27AE60" stroke-width="2" fill="none" stroke-dasharray="8,4"/>
+  <circle cx="640" cy="120" r="4" fill="#27AE60"/>
+  <text x="660" y="118" font-size="11" font-weight="bold" fill="#27AE60">With</text>
+  <text x="660" y="131" font-size="9" fill="#27AE60">HGC³AE²</text>
+  
+  <!-- Annotation -->
+  <rect x="140" y="40" width="280" height="30" rx="4" fill="#FEF9E7" stroke="#F39C12" stroke-width="1"/>
+  <text x="280" y="60" text-anchor="middle" font-size="10" fill="#7D6608">Without governance, trust outpaces actual reliability</text>
+</svg>
