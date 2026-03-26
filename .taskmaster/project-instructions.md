@@ -1,6 +1,13 @@
 # Content Ops — Feed Crusher Project Instructions
 # Cowork Project Configuration for Content Lab
 
+> **⚠ WORKSPACE REQUIREMENT:** This project MUST mount the shared YKS workspace folder
+> **"Scrum Master (TM)"** — NOT a project-specific folder. All credentials, prompts, retros,
+> and shared assets live there. See `.cowork.md` at repo root and `WORKSPACE.md` in the
+> mounted folder for the full directory map.
+>
+> If `.secrets/deploy-keys/` is not found at boot, STOP and tell Yeti to remount.
+
 ---
 
 **Purpose & context**
